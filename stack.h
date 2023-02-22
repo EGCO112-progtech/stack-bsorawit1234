@@ -64,7 +64,7 @@ char *isBalance(StackPtr s, char *str) {
 			push(s, str[i]);
 		} else if(str[i] == '}' || str[i] == ']' || str[i] == ')') {
 			if(isEmpty(*s)) {
-				return "incorect: too many closed parentheses";
+				return "incorrect: too many closed parentheses";
 			} else {
 				char temp = pop(s);
 				if(str[i] == '}' && temp != '{') {
