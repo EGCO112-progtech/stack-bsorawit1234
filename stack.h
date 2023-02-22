@@ -68,11 +68,11 @@ char *isBalance(StackPtr s, char *str) {
 			} else {
 				char temp = pop(s);
 				if(str[i] == '}' && temp != '{') {
-					return "incorect: mismatch";
+					return "incorrect: mismatch";
 				} else if(str[i] == ']' && temp != '[') {
-					return "incorect: mismatch";
+					return "incorrect: mismatch";
 				} else if(str[i] == ')' && temp != '(') {
-					return "incorect: mismatch";
+					return "incorrect: mismatch";
 				}
 			}
 		}
@@ -81,7 +81,7 @@ char *isBalance(StackPtr s, char *str) {
 	if(isEmpty(*s)) {
 		return "correct";
 	} else {
-		return "incorect: too many open parentheses";
+		return "incorrect: too many open parentheses";
 	}
 }
 
