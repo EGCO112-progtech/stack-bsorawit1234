@@ -1,3 +1,8 @@
-argument: main.c 
-	gcc main.c -o stack
+DEPS = stack
+
+compile: main.c 
+	gcc main.c -o $(DEPS)
+
+run: $(DEPS)
+	./$(DEPS) "{[]}[]" "{[]]" "[]" "{{" "}}"
 
